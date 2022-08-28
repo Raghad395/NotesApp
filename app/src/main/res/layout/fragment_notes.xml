@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.NotesFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:letterSpacing="0.06"
+        android:padding="10sp"
+        android:text="@string/my_notes"
+        android:textColor="@color/dark_gray"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <SearchView
+        android:id="@+id/search_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text1"
+        app:layout_constraintVertical_bias="0.0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:queryHint="@string/Search"
+        android:searchIcon="@drawable/ic_search"
+        android:theme="@style/ThemeOverlay.search"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="69dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="10"
+        tools:listitem="@layout/notes_item"
+        android:layout_margin="10sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_view" />
+
+    <LinearLayout
+        android:layout_width="425dp"
+        android:layout_height="54dp"
+        android:background="@drawable/background"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerview"
+        app:layout_constraintVertical_bias="1.0">
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_check"
+            app:tint="@color/dark_gray" />
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_image"
+            app:tint="@color/dark_gray" />
+
+        <ImageView
+            android:layout_width="33dp"
+            android:layout_height="33dp"
+            android:src="@drawable/ic_link"
+            app:tint="@color/dark_gray" />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/BtnCreateNote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:background="@color/teal_700"
+        android:src="@drawable/ic_add"
+        android:tint="@color/teal_600"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

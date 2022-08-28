@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/pagehome"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment"
+    android:background="@color/white">
+
+<!-- TODO: Layout for Home Welcome Page -->
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="91dp">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="101dp"
+            android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:text="@string/Welcome"
+            android:textAlignment="center"
+            android:textColor="@color/teal_600"
+            android:textSize="45sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="137dp"
+            android:padding="10dp"
+            android:text="@string/Notes"
+            android:textAlignment="center"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="151dp"
+            android:src="@drawable/homepage_pic" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="132dp"
+        android:background="@drawable/signup_button_design"
+        android:letterSpacing="0.05"
+        android:padding="5dp"
+        android:text="@string/Login"
+        android:textAlignment="center"
+        android:textColor="#F4F4F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+    <Button
+        android:id="@+id/signup_button"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/signup_button_design"
+        android:letterSpacing="0.05"
+        android:padding="5dp"
+        android:text="@string/SignUp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
